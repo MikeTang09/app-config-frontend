@@ -1,11 +1,11 @@
 FROM registry.cn-hangzhou.aliyuncs.com/dockerhub_mirror/nginx
-MAINTAINER jeecgos@163.com
+MAINTAINER wangduanpei5@163.com
 VOLUME /tmp
 ENV LANG en_US.UTF-8
 RUN echo "server {  \
                       listen       80; \
-                      location   /jeecgboot/ { \
-                      proxy_pass              http://jeecg-boot-system:8080/jeecg-boot/; \
+                      location   /adv-boot/ { \
+                      proxy_pass              http://admin.mlusage97248.top:8080/adv-boot/; \
                       proxy_redirect          off; \
                       proxy_set_header        Host jeecg-boot-system; \
                       proxy_set_header        X-Real-IP \$remote_addr; \
